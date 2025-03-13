@@ -1,13 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from './componentes/Banner';
+import CampoTexto from './componentes/CampoTexto';
+import Formulario from './componentes/Formulario';
+import ListaSuspensa from './componentes/ListaSuspensa';
 
 function App() {
   return (
     <div className="App">
+      <Banner />
+      <Formulario />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Bem-vindo ao React!
         </p>
         <a
           className="App-link"
