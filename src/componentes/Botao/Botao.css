@@ -1,0 +1,50 @@
+.botao {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border: none;
+}
+
+.botao img {
+    width: 20px;
+    height: 20px;
+    padding-left: 8px;
+}
+
+.botao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: white;
+    transition: width 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.botao:hover::before {
+    width: 100%;
+}
+
+.botao:hover {
+    color: #ffffff;
+}
+
+.botao:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+}
