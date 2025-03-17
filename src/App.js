@@ -1,18 +1,65 @@
+import React, { useState } from 'react';
 import Banner from './componentes/Banner';
-import CampoTexto from './componentes/CampoTexto';
 import Formulario from './componentes/Formulario';
-import ListaSuspensa from './componentes/ListaSuspensa';
-import './global.css'
+import './global.css';
+import Time from './componentes/Time';
 
 function App() {
+
+  const times = [
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+    (
+      nome: '',
+      corPrimaria: '',
+      corSecundaria: ''
+    )
+  ]
+
+  const [colaboradores, setColaboradores] = useState([]);
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    console.log(colaborador);
+    setColaboradores([...colaboradores, colaborador]);
+  };
+
   return (
     <div className="App">
       <Banner />
-      <Formulario />
+      <Formulario aoColaboradorCadastrado={aoNovoColaboradorAdicionado} /> 
+      <Time nome="Programação"/>
+      <Time nome="Front-end"/>
+      <Time nome="Data Science"/>
       <header className="App-header">
-        <p>
-          Bem-vindo ao React!
-        </p>
+        <p>Bem-vindo ao React!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
